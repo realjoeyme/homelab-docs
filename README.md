@@ -41,7 +41,7 @@ Single pane of glass monitoring for the entire Proxmox infrastructure — provid
 Two instances of network-wide ad blocker running on the LAN. Blocks ads and trackers at the DNS level with live query statistics and gravity blocklist management.
 
 ### UniFi OS Server
-Management platform for Ubiquiti networking gear — switches, access points, and security gateways.
+Management platform for Ubiquiti networking gear.
 
 ### MySpeed
 Self-hosted internet speed test tracker that logs and displays historical download/upload speeds and ping metrics.
