@@ -54,10 +54,18 @@ Self-hosted monitoring tool tracking the uptime and response time of internal an
 ## 💾 Storage
 
 ### Synology DS423+ (NAS)
-Network-attached storage serving as the central file store for the homelab. Hosts media libraries, photos, and download station.
+DiskStation NAS running **DSM 7** on an ARM-based processor with a **4× 2.5" SSD configuration**:
 
-- **Storage:** 303.5 GiB available
+| Storage Pool | Drives | Configuration | Use Case |
+|-------------|--------|--------------|----------|
+| Storage Pool 1 | 2× 1TB WD Red SA500 | RAID 1 (BTRFS) | Primary data store |
+| Storage Pool 2 | 2× 500GB Samsung 860 EVO | RAID 0 (BTRFS) | Media, backups, ISO libraries, Time Machine target |
+
+Both pools use **BTRFS** with periodic snapshots for data protection. A custom **Realtek NIC driver from bb-qq** provides a **2.5Gbit USB adapter** based on the **RTL8156B** chip, delivering reliable high-speed connectivity.
+
 - **Services:** Synology Photos, Notes Station, Download Station
+- **Uptime:** Months of continuous operation with zero packet drops recorded
+- **Available storage:** 303.5 GiB
 
 ---
 
