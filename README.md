@@ -6,7 +6,7 @@
 
 ---
 
-## Infrastructure
+## ✨ Infrastructure
 
 ### Proxmox VE (N150Cluster)
 Proxmox virtual environment cluster with three nodes (x01.lan, x02.lan, x03.lan) providing virtualization for VMs and LXC containers with real-time CPU/RAM monitoring.
@@ -19,7 +19,7 @@ Single pane of glass monitoring for the entire Proxmox infrastructure — provid
 
 ---
 
-## Network
+## 🚀 Network
 
 ### Pi-hole (×2)
 Two instances of network-wide ad blocker running on the LAN. Blocks ads and trackers at the DNS level with live query statistics and gravity blocklist management.
@@ -35,7 +35,7 @@ Self-hosted monitoring tool tracking the uptime and response time of internal an
 
 ---
 
-## Storage
+## 💾 Storage
 
 ### Synology DS423+ (NAS)
 Network-attached storage serving as the central file store for the homelab. Hosts media libraries, photos, and download station.
@@ -45,7 +45,7 @@ Network-attached storage serving as the central file store for the homelab. Host
 
 ---
 
-## Media
+## 🎬 Media
 
 ### Plex
 Media server streaming personal video and music libraries to devices across the network. Currently serving 1 active stream.
@@ -54,7 +54,7 @@ Media server streaming personal video and music libraries to devices across the 
 
 ---
 
-## Home Automation
+## 🏠 Home Automation
 
 ### Home Assistant
 Central hub for smart home integration. Manages lights, switches, and presence detection.
