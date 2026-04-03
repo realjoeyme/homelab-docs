@@ -21,12 +21,15 @@ A third standalone node — **x03.lan** — handles less critical workloads and 
 
 **Cluster:** 2-node knet transport, secure authentication enabled
 **Quorum:** Quorate with Qdevice — expected votes 3, quorum 2
+**Proxmox VE version:** 9.1.7
 
 ### ✅ Windows Server 2022
-On-premises identity and directory infrastructure running **Active Directory Domain Services**, providing user and computer authentication across the homelab. Also serves as the **DHCP server** for the LAN and runs the **MS DNS role** for internal name resolution.
+On-premises identity and directory infrastructure running **Active Directory Domain Services**, providing user and computer authentication across the homelab. Also serves as the **DHCP server** for the LAN and runs the **MS DNS role** for internal name resolution. Running as a **highly available VM on the Proxmox VE cluster**, replicated to the secondary node in 15-minute intervals.
 
 ### ✅ Proxmox Backup Server (PBS)
-Dedicated backup solution for the Proxmox cluster, handling incremental backups and snapshot management for all VMs and containers.
+Dedicated backup solution for the Proxmox cluster, handling incremental backups and snapshot management for all VMs and containers. Running as a **highly available VM** with a **600GB local NVMe datastore** — both the VM and datastore are replicated within the cluster. NVMe-backed storage ensures fast restore times.
+
+**PBS version:** 4.1.5
 
 ### ✅ Homepage
 Modern, fully static, fast, and highly customizable application dashboard. Configured via YAML files with widget integrations for all major services. CPU and temperature monitoring powered by **Glances**.
@@ -41,16 +44,20 @@ Single pane of glass monitoring for the entire Proxmox infrastructure — provid
 ## 🚀 Network
 
 ### ✅ Pi-hole (×2)
-Two instances of network-wide ad blocker running on the LAN. Blocks ads and trackers at the DNS level with live query statistics and gravity blocklist management.
+Two instances of network-wide ad blocker running on the LAN. Blocks ads and trackers at the DNS level with live query statistics and gravity blocklist management. Kept in sync via **Nebula-sync** Docker container running on the Synology.
+
+**Pi-hole version:** v6.4
 
 ### ✅ UniFi OS Server
-Management platform for Ubiquiti networking gear.
+Management platform for Ubiquiti networking gear. Physical switch: **UniFi Flex Mini 2.5Gbit** — all devices in the homelab are connected at 2.5Gbit.
 
 ### ✅ MySpeed
 Self-hosted internet speed test tracker that logs and displays historical download/upload speeds and ping metrics.
 
 ### ✅ Uptime Kuma
-Self-hosted monitoring tool tracking the uptime and response time of internal and external services — currently showing 8 sites up at 100% uptime.
+Self-hosted monitoring tool tracking the uptime and response time of internal and external services. Monitoring up to 8 services with reported 100% uptime.
+
+![Uptime Kuma](uptimkuma-screenshot.png)
 
 ---
 
@@ -66,8 +73,9 @@ DiskStation NAS running **DSM 7** on an ARM-based processor with a **4× 2.5" SS
 
 Both pools use **BTRFS** with periodic snapshots for data protection. A custom **Realtek NIC driver from bb-qq** provides a **2.5Gbit USB adapter** based on the **RTL8156B** chip, delivering reliable high-speed connectivity.
 
-- **Services:** Synology Photos, Notes Station, Download Station
+- **Services:** Synology Photos, Notes Station, Download Station, Nebula-sync
 - **Uptime:** Months of continuous operation with zero packet drops recorded
+- **DSM version:** 7.3.2-860009 Update 3
 
 ![Homelab Physical](homelab-physical.jpg)
 
@@ -87,7 +95,7 @@ Media server streaming personal video and music libraries to devices across the 
 ### ✅ Home Assistant
 Central hub for smart home integration. Manages lights, switches, and presence detection.
 
-- **Status:** 1/1 people home, 4/4 lights on, 0/1 switches on
+![Home Assistant](homeassistant-dashboard.png)
 
 ---
 
