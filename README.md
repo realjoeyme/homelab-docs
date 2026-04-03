@@ -69,6 +69,8 @@ Both pools use **BTRFS** with periodic snapshots for data protection. A custom *
 - **Services:** Synology Photos, Notes Station, Download Station
 - **Uptime:** Months of continuous operation with zero packet drops recorded
 
+![Homelab Physical](homelab-physical.jpg)
+
 ---
 
 ## 🎬 Media
