@@ -22,6 +22,9 @@ A third standalone node — **x03.lan** — handles less critical workloads and 
 **Cluster:** 2-node knet transport, secure authentication enabled
 **Quorum:** Quorate with Qdevice — expected votes 3, quorum 2
 
+### Windows Server 2022
+On-premises identity and directory infrastructure running **Active Directory Domain Services**, providing user and computer authentication across the homelab. Also serves as the **DHCP server** for the LAN and runs the **MS DNS role** for internal name resolution.
+
 ### Proxmox Backup Server (PBS)
 Dedicated backup solution for the Proxmox cluster, handling incremental backups and snapshot management for all VMs and containers.
 
