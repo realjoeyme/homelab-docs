@@ -14,6 +14,9 @@ Proxmox virtual environment cluster with three nodes (x01.lan, x02.lan, x03.lan)
 ### Proxmox Backup Server (PBS)
 Dedicated backup solution for the Proxmox cluster, handling incremental backups and snapshot management for all VMs and containers.
 
+### Pulse
+Single pane of glass monitoring for the entire Proxmox infrastructure — provides unified dashboard, Telegram alerts, temperature monitoring, SSD health/disk life, backup overview, and AI-powered insights. Replaces the need for multiple monitoring tools with one cohesive interface.
+
 ---
 
 ## Network
