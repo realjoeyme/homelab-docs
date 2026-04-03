@@ -28,6 +28,8 @@ Dedicated backup solution for the Proxmox cluster, handling incremental backups 
 ### Pulse
 Single pane of glass monitoring for the entire Proxmox infrastructure — provides unified dashboard, Telegram alerts, temperature monitoring, SSD health/disk life, backup overview, and AI-powered insights. Replaces the need for multiple monitoring tools with one cohesive interface.
 
+![Pulse Dashboard](pulse-screenshot.png)
+
 ---
 
 ## 🚀 Network
