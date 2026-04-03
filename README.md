@@ -28,6 +28,11 @@ On-premises identity and directory infrastructure running **Active Directory Dom
 ### Proxmox Backup Server (PBS)
 Dedicated backup solution for the Proxmox cluster, handling incremental backups and snapshot management for all VMs and containers.
 
+### Homepage
+Modern, fully static, fast, and highly customizable application dashboard running at **http://192.168.100.23:3000**. Configured via YAML files with widget integrations for all major services. CPU and temperature monitoring powered by **Glances**.
+
+![Dashboard](dashboard-april-2026.png)
+
 ### Pulse
 Single pane of glass monitoring for the entire Proxmox infrastructure — provides unified dashboard, Telegram alerts, temperature monitoring, SSD health/disk life, backup overview, and AI-powered insights. Replaces the need for multiple monitoring tools with one cohesive interface.
 
