@@ -2,7 +2,7 @@
 
 > Snapshot of my self-hosted services running as of April 2026.
 
-![Dashboard](dashboard-april-2026.jpg)
+![Dashboard](dashboard-april-2026.png)
 
 ---
 
