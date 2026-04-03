@@ -6,15 +6,6 @@
 
 ---
 
-## 🤖 AI Agent
-
-### ✅ Cait (OpenClaw)
-Personal AI assistant running as an **OpenClaw** agent on a dedicated **Ubuntu Desktop VM**. Powered by **MiniMax-M2.7** as the primary LLM brain. Handles automation, homelab management, documentation, and general assistance — acting as the intelligent core of the entire setup.
-
-![Cait AI Assistant](cait.png)
-
----
-
 ## ✨ Infrastructure
 
 ### ✅ Proxmox VE (N150Cluster)
@@ -47,6 +38,15 @@ Modern, fully static, fast, and highly customizable application dashboard. Confi
 Single pane of glass monitoring for the entire Proxmox infrastructure — provides unified dashboard, Telegram alerts, temperature monitoring, SSD health/disk life, backup overview, and AI-powered insights. Replaces the need for multiple monitoring tools with one cohesive interface.
 
 ![Pulse Dashboard](pulse-screenshot.png)
+
+---
+
+## 🤖 AI Agent
+
+### ✅ Cait (OpenClaw)
+Personal AI assistant running as an **OpenClaw** agent on a dedicated **Ubuntu Desktop VM**. Powered by **MiniMax-M2.7** as the primary LLM brain. Handles automation, homelab management, documentation, and general assistance — acting as the intelligent core of the entire setup.
+
+![Cait AI Assistant](cait.png)
 
 ---
 
