@@ -9,9 +9,9 @@
 ## ✨ Infrastructure
 
 ### ✅ Proxmox VE (N150Cluster)
-High-availability Proxmox VE cluster running on two **GMKTEC NUCBOX G3 Plus** nodes, each equipped with an **Intel N150** processor, **32GB RAM**, and a **1TB NVMe SSD**. Zero-downtime resilience is achieved via ZFS-replication, syncing mission-critical VMs to the secondary node at 15-minute intervals.
+Proxmox VE cluster running on two **GMKTEC NUCBOX G3 Plus** nodes — each with an **Intel N150**, **32GB RAM**, and a **1TB NVMe SSD**. Mission-critical VMs are replicated to the second node every 15 minutes via ZFS-replication, so nothing bad happens if one node goes down.
 
-A third standalone node — **x03.lan** — handles less critical workloads and serves as the cluster's **Corosync quorum Qdevice** (Intel NUC 11, N6005, 32GB RAM, 1TB NVMe SSD).
+A third standalone node — **x03.lan** — runs less critical stuff and acts as the cluster's **Corosync quorum Qdevice** (Intel NUC 11, N6005, 32GB RAM, 1TB NVMe SSD).
 
 | Node | Role | Hardware | Status |
 |------|------|----------|--------|
@@ -24,10 +24,10 @@ A third standalone node — **x03.lan** — handles less critical workloads and 
 **Proxmox VE version:** 9.1.7
 
 ### ✅ Windows Server 2022
-On-premises identity and directory infrastructure running **Active Directory Domain Services**, providing user and computer authentication across the homelab. Also serves as the **DHCP server** for the LAN and runs the **MS DNS role** for internal name resolution. Running as a **highly available VM on the Proxmox VE cluster**, replicated to the secondary node in 15-minute intervals.
+Handles **Active Directory**, **DHCP**, and **MS DNS** for the LAN. Running as a **highly available VM** on the Proxmox cluster, replicated every 15 minutes to the secondary node.
 
 ### ✅ Proxmox Backup Server (PBS)
-Dedicated backup solution for the Proxmox cluster, handling incremental backups and snapshot management for all VMs and containers. Running as a **highly available VM** with a **600GB local NVMe datastore** — both the VM and datastore are replicated within the cluster. NVMe-backed storage ensures fast restore times.
+Handles incremental backups and snapshots for all VMs and containers in the Proxmox cluster. Running as a **highly available VM** with a **600GB local NVMe datastore** — both the VM and datastore are replicated within the cluster. NVMe datastore means restores are nice and fast.
 
 **PBS version:** 4.1.5
 
@@ -35,7 +35,7 @@ Dedicated backup solution for the Proxmox cluster, handling incremental backups 
 Modern, fully static, fast, and highly customizable application dashboard. Configured via YAML files with widget integrations for all major services. CPU and temperature monitoring powered by **Glances**.
 
 ### ✅ Pulse
-Single pane of glass monitoring for the entire Proxmox infrastructure — provides unified dashboard, Telegram alerts, temperature monitoring, SSD health/disk life, backup overview, and AI-powered insights. Replaces the need for multiple monitoring tools with one cohesive interface.
+Gives me a single dashboard view across the whole Proxmox setup — Telegram alerts, temperature monitoring, SSD health, backup overview, and AI-powered insights. Saves me from jumping between multiple tools.
 
 ![Pulse Dashboard](pulse-screenshot.png)
 
@@ -44,7 +44,7 @@ Single pane of glass monitoring for the entire Proxmox infrastructure — provid
 ## 🤖 AI Agent
 
 ### ✅ Cait (OpenClaw)
-Personal AI assistant running as an **OpenClaw** agent on a dedicated **Ubuntu Desktop VM**. Powered by **MiniMax-M2.7** as the primary LLM brain. Handles automation, homelab management, documentation, and general assistance — acting as the intelligent core of the entire setup.
+My personal AI assistant running on a dedicated **Ubuntu Desktop VM** via **OpenClaw**. Powered by **MiniMax-M2.7**. Handles automations, homelab management, docs, and everything in between.
 
 ![OpenClaw](openclaw_1.png)
 
@@ -84,7 +84,7 @@ DiskStation NAS running **DSM 7** on an ARM-based processor with a **4× 2.5" SS
 | Storage Pool 1 | 2× 1TB WD Red SA500 | RAID 1 (BTRFS) | Primary data store | 576.8 GiB available |
 | Storage Pool 2 | 2× 500GB Samsung 860 EVO | RAID 0 (BTRFS) | Media, backups, ISO libraries, Time Machine target | 303.5 GiB available |
 
-Both pools use **BTRFS** with periodic snapshots for data protection. A custom **Realtek NIC driver from bb-qq** enables a **2.5Gbit USB-NIC** based on the **RTL8156B** chip — providing full 2.5Gbit throughput sustained during extended file transfers.
+Both pools use **BTRFS** with periodic snapshots. The custom **bb-qq Realtek driver** lets me use a **2.5Gbit USB-NIC** with the **RTL8156B** chip — pushing full 2.5Gbit speeds even during long file transfers, no issues.
 
 - **Services:** Synology Photos, Notes Station, Download Station, Nebula-sync
 - **Uptime:** Months of continuous operation with zero packet drops recorded
@@ -110,7 +110,7 @@ Media server streaming personal video and music libraries to devices across the 
 ## 🏠 Home Automation
 
 ### ✅ Home Assistant
-Central hub for smart home integration. Manages lights, switches, and presence detection.
+Runs the smart home — lights, switches, presence detection, the usual.
 
 ![Home Assistant](homeassistant-dashboard.png)
 
