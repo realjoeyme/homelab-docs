@@ -97,9 +97,14 @@ Both pools use **BTRFS** with periodic snapshots for data protection. A custom *
 ## 🎬 Media
 
 ### ✅ Plex
-Media server streaming personal video and music libraries to devices across the network. Currently serving 1 active stream.
+Media server streaming personal video and music libraries to devices across the network. Running as a **Proxmox LXC container** — extremely lightweight at only **~200MB RAM** and negligible CPU usage. Originally evaluated Jellyfin, but stuck with Plex due to native Samsung Smart TV app and no transcoding requirements.
+
+**Remote access:** **Tailscale** enables streaming PlexAmp on iOS from anywhere with better quality than traditional music streaming services — at zero cost.
 
 - **Library:** 87 movies, 6 TV shows, 130 albums
+- **Currently:** 1 active stream
+
+![Plex](plex.png)
 
 ---
 
