@@ -46,16 +46,20 @@ Single pane of glass monitoring for the entire Proxmox infrastructure — provid
 ### ✅ Cait (OpenClaw)
 Personal AI assistant running as an **OpenClaw** agent on a dedicated **Ubuntu Desktop VM**. Powered by **MiniMax-M2.7** as the primary LLM brain. Handles automation, homelab management, documentation, and general assistance — acting as the intelligent core of the entire setup.
 
-![Cait AI Assistant](cait.png)
+![OpenClaw](openclaw_1.png)
 
 ---
 
 ## 🚀 Network
 
 ### ✅ Pi-hole (×2)
-Two instances of network-wide ad blocker running on the LAN. Blocks ads and trackers at the DNS level with live query statistics and gravity blocklist management. Kept in sync via **Nebula-sync** Docker container running on the Synology.
+Two instances of network-wide ad blocker running on the LAN. Blocks ads and trackers at the DNS level with live query statistics and gravity blocklist management. Using **StevenBlack/hosts** blocklist with categories for ads, tracking, spam, gambling, and adult content. Additionally, most IoT devices have their cloud telemetry and "calling home" individually blocked at the DNS level — while preserving local control via Home Assistant. Result: **26% of all DNS queries blocked**.
+
+Kept in sync via **Nebula-sync** Docker container running on the Synology.
 
 **Pi-hole version:** v6.4
+
+![Pi-hole](pihole_1.png)
 
 ### ✅ UniFi OS Server
 Management platform for Ubiquiti networking gear. Physical switch: **UniFi Flex Mini 2.5Gbit** — all devices in the homelab are connected at 2.5Gbit.
