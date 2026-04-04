@@ -102,7 +102,6 @@ Media server streaming personal video and music libraries to devices across the 
 **Remote access:** **Tailscale** enables streaming PlexAmp on iOS from anywhere with better quality than traditional music streaming services — at zero cost.
 
 - **Library:** 87 movies, 6 TV shows, 130 albums
-- **Currently:** 1 active stream
 
 ![Plex](plex.png)
 
