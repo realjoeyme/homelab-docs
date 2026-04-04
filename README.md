@@ -68,7 +68,9 @@ Management platform for Ubiquiti networking gear. Physical switch: **UniFi Flex 
 Self-hosted internet speed test tracker that logs and displays historical download/upload speeds and ping metrics.
 
 ### ✅ Uptime Kuma
-Self-hosted monitoring tool tracking the uptime and response time of internal and external services. Monitoring up to 8 services with reported 100% uptime.
+Self-hosted monitoring tool tracking the uptime and response time of internal and external services. Monitoring up to 8 services with reported 100% uptime. Running as a **Docker container on the Synology** so it stays online even if the Proxmox cluster goes down — Telegram alerts are enabled for notifications.
+
+**Version:** 2.2.1
 
 ![Uptime Kuma](uptimkuma-screenshot.png)
 
