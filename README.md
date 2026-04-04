@@ -119,10 +119,10 @@ Central hub for smart home integration. Manages lights, switches, and presence d
 ## 🔮 Future Plans
 
 ### Technitium DNS (replacing Pi-hole)
-Consolidating DNS infrastructure by migrating from Pi-hole to **Technitium DNS**. The key drivers: Technitium combines authoritative and recursive DNS with built-in ad-blocking, eliminating the need for Nebula-sync. Native clustering support enables multi-server synchronization out of the box. Additionally, leveraging an existing public domain to run **split-brain DNS** — serving internal addresses for LAN clients while resolving public records externally.
+Pi-hole has been solid, but Technitium DNS does more — it handles both authoritative and recursive DNS with ad-blocking built in. No more Nebula-sync since Technitium has native clustering. The plan is to use my own public domain for **split-brain DNS** so internal services get internal IPs while public records resolve normally.
 
 ### Reverse Proxy with Let's Encrypt
-Introducing a reverse proxy (e.g. Nginx Proxy Manager or Traefik) to terminate SSL for all web services. This enables proper **Let's Encrypt certificates** across the homelab, eliminating self-signed certificate warnings and streamlining access to all internal services.
+Getting tired of self-signed certificate warnings. Planning to add a reverse proxy (Nginx Proxy Manager or Traefik) so everything gets proper **Let's Encrypt certificates**. Should make the whole setup a lot smoother to use.
 
 ---
 
