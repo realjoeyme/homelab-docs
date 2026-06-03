@@ -44,7 +44,7 @@ Gives me a single dashboard view across the whole Proxmox setup — Telegram ale
 ## 🤖 AI Agent
 
 ### ✅ Cait (OpenClaw)
-My personal AI assistant running on a dedicated **Ubuntu Desktop VM** via **OpenClaw**. Powered by **MiniMax-M2.7**. Handles automations, homelab management, docs, and everything in between.
+My personal AI assistant running on a dedicated **Ubuntu Server VM** via **OpenClaw**. Powered by **MiniMax-M2.7**. Handles automations, homelab management, docs, and everything in between.
 
 ![OpenClaw](openclaw_1.png)
 
