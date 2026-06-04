@@ -78,7 +78,7 @@ Self-hosted monitoring tool tracking the uptime and response time of internal an
 
 ## 💾 Storage
 
-### ✅ Synology DS423+ (NAS)
+### ✅ Synology DS423 (NAS)
 DiskStation NAS running **DSM 7** on an ARM-based processor with a **4× 2.5" SSD configuration**:
 
 | Storage Pool | Drives | Configuration | Use Case |
