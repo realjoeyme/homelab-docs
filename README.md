@@ -7,7 +7,7 @@
 | **Dell Optiplex 3000** | pve1 | i5-12500T | 64 GB | 1 TB NVMe, 512 GB SSD | Proxmox VE 9.2.3 | `192.168.100.100` |
 | **Synology DS423** | ds1 | RTD1619B | 2 GB | 2x 1 TB SSD, 2x 500 GB SSD | DSM 7.3.2 U3 | `192.168.100.61` |
 
-![Hardware](IMG_6342.JPG_compressed2.JPEG)
+![Hardware](hardware.jpg)
 
 ### ✅ DELL Optiplex 3000 Micro
 
