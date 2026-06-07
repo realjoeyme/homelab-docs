@@ -4,6 +4,7 @@ These are the docker-compose stacks running on docker-01.lan and docker-02.lan a
 
 ## Structure
 
+```
 docker/
 ├── docker-01/
 │   ├── dozzle/         (log aggregation agent)
@@ -13,9 +14,10 @@ docker/
 │   ├── unifi/          (UniFi Network Application + MongoDB)
 │   └── watchtower/     (auto-updater)
 └── docker-02/
-├── dozzle/         (log aggregation UI)
-├── pulse/          (homelab monitoring)
-└── watchtower/     (auto-updater)
+    ├── dozzle/         (log aggregation UI)
+    ├── pulse/          (homelab monitoring)
+    └── watchtower/     (auto-updater)
+```
 
 ## What's intentionally NOT included
 
