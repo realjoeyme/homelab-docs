@@ -1,0 +1,30 @@
+services:
+  pulse:
+    image: rcourtman/pulse:latest
+    container_name: pulse
+    restart: unless-stopped
+    volumes:
+      - /opt/pulse/data:/data
+    networks:
+      pulse_macvlan:
+        ipv4_address: 192.168.100.11
+
+  apprise:
+    image: caronc/apprise:latest
+    container_name: apprise
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    networks:
+      pulse_macvlan:
+        ipv4_address: 192.168.100.120
+
+networks:
+  pulse_macvlan:
+    driver: macvlan
+    driver_opts:
+      parent: eth0
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24
+          gateway: 192.168.100.1

@@ -1,0 +1,12 @@
+services:
+   nebula-sync:
+      image: lovelaze/nebula-sync:latest
+      container_name: nebula-sync
+      restart: unless-stopped
+      environment:
+         - TZ=Europe/Bratislava
+         - PRIMARY=${PRIMARY}
+         - REPLICAS=${REPLICAS}
+         - FULL_SYNC=true
+         - CRON=0 * * * * # every hour
+         - API_ENABLED=true

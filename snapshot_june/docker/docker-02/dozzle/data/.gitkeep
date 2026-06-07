@@ -1,0 +1,2 @@
+Dozzle generates users.yml on first start via its web UI.
+This directory must exist for the volume mount in docker-compose.yml.

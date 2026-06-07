@@ -1,0 +1,43 @@
+# Real secrets — never commit
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dozzle admin hash — auto-generated, contains bcrypt
+**/dozzle/data/users.yml
+!**/dozzle/data/.gitkeep
+
+# TLS private keys / Let's Encrypt credentials
+**/*.pem
+**/*.key
+**/credentials-*
+
+# Encrypted data / encryption keys
+**/*.enc
+**/.encryption.key
+
+# Database files (Pulse metrics, notification queue)
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.sqlite*
+**/*.bak
+
+# Tailscale state
+**/tailscaled.state
+
+# Pulse runtime data (sessions, tokens, csrf, metadata, enc, db)
+**/pulse/data/
+
+# UniFi runtime data
+**/unifi/config/data/
+**/unifi/db/
+
+# NPM runtime data
+**/npm/data/
+**/npm/letsencrypt/
+**/npm/tailscale/
+
+# Custom Homepage files (not part of the snapshot)
+**/custom.css
+**/custom.js

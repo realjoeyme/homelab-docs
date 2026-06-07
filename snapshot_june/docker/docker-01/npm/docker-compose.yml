@@ -1,0 +1,35 @@
+services:
+  npm:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: npm
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Bratislava
+    volumes:
+      - /opt/npm/data:/data
+      - /opt/npm/letsencrypt:/etc/letsencrypt
+    networks:
+      macvlan-net:
+        ipv4_address: 192.168.100.21
+
+  tailscale:
+    image: tailscale/tailscale:latest
+    container_name: npm-tailscale
+    restart: unless-stopped
+    network_mode: service:npm
+    depends_on:
+      - npm
+    cap_add:
+      - net_admin
+      - sys_module
+    volumes:
+      - /opt/npm/tailscale:/var/lib/tailscale
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - TS_STATE_DIR=/var/lib/tailscale
+      - TS_AUTHKEY=${TS_AUTHKEY}
+      - TS_EXTRA_ARGS=--accept-dns=false
+
+networks:
+  macvlan-net:
+    external: true

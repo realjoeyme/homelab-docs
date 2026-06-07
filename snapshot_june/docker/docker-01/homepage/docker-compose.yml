@@ -1,0 +1,19 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Europe/Bratislava
+      - HOMEPAGE_ALLOWED_HOSTS=192.168.100.23:3000,homepage.joeyme.eu
+    volumes:
+      - /opt/homepage/config:/app/config
+    networks:
+      macvlan-net:
+        ipv4_address: 192.168.100.23
+
+networks:
+  macvlan-net:
+    external: true

@@ -1,0 +1,21 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+- glances:
+    url: http://192.168.100.100:61208
+    version: 4
+    cpu: false
+    mem: false
+    uptime: true
+    cputemp: true
+
+- search:
+     provider: google
+     target: _blank
+
+- datetime:
+    text_size: xl
+    # 13:37
+    format:
+      timeStyle: short
+      hourCycle: h23

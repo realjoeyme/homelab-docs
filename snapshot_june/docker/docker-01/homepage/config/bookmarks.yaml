@@ -1,0 +1,66 @@
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+- Bookmarks:
+    - Gemini:
+        - href: https://gemini.google.com/
+          icon: google-gemini.png
+    - ChatGPT:
+        - href: https://chatgpt.com
+          icon: chatgpt.png
+    - Deepseek:
+        - href: https://www.deepseek.com/en/
+          icon: deepseek.png
+    - Hermes Dashboard:
+        - href: https://hermes.joeyme.eu/
+          icon: sh-hermes-agent.png
+    - OpenRouter:
+        - href: https://openrouter.ai/
+          icon: si-openrouter-#FF6300
+
+- "⠀":
+    - Outlook:
+        - href: https://outlook.live.com/
+          icon: microsoft-outlook.png
+    - Gmail:
+        - href: https://gmail.com/
+          icon: gmail.png
+    - Azure:
+        - href: https://portal.azure.com
+          icon: azure.png
+    - Tailscale:
+        - href: https://login.tailscale.com/admin/machines
+          icon: si-tailscale-#FDB515
+    - Plex Fileserver:
+        - href: https://fsplex.joeyme.eu/
+          icon: sh-file-browser.png
+
+- "⠀":
+    - YouTube:
+        - href: https://youtube.com/
+          icon: si-youtube-#FF0000
+    - Youtube Studio:
+        - href: https://studio.youtube.com/
+          icon: si-youtubestudio-#FF0000
+    - Joey Me Web:
+        - href: https://realjoeyme.github.io/joeyme/
+          icon: si-gitlab-#FC6D26
+    - GitHub:
+        - href: https://github.com/
+          icon: si-github-#B0B0B0
+    - Websupport:
+        - href: https://admin.websupport.sk/en/
+          icon: azure-dns.png
+
+- "⠀":
+    - Reddit:
+        - href: https://reddit.com/
+          icon: reddit.png
+    - X.com:
+        - href: https://x.com/
+          icon: x.png
+    - Facebook:
+        - href: https://facebook.com/
+          icon: facebook.png
+    - LinkedIn:
+        - href: https://linkedin.com/
+          icon: linkedin.png

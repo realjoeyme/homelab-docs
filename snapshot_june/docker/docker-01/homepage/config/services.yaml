@@ -1,0 +1,152 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Homelab:
+    - Proxmox:
+        href: https://pve1.joeyme.eu
+        icon: proxmox.png
+        description: pve1
+        widget:
+            type: proxmox
+            url: https://192.168.100.100:8006
+            username: homepage@pam!homepage
+            password: {{HOMEPAGE_VAR_PROXMOX_TOKEN}}
+    - CPU:
+        widget:
+            type: glances
+            url: http://192.168.100.100:61208
+            version: 4
+            metric: cpu
+            chart: true   
+    - Network:
+        widget:
+            type: glances
+            url: http://192.168.100.100:61208
+            version: 4
+            metric: network:vmbr0
+            chart: true
+
+    - Home Assistant:
+        href: https://ha.joeyme.eu/my-dashboard/default_view
+        icon: sh-home-assistant.png
+        widget:
+            type: homeassistant
+            url: http://192.168.100.3:8123
+            key: {{HOMEPAGE_VAR_HAOS_TOKEN}}
+         
+- "⠀":
+    - Pi-hole 1:
+        href: https://pihole.joeyme.eu/admin/
+        icon: pi-hole.png
+        description: pihole.joeyme.eu
+        widget:
+            type: pihole
+            url: http://pihole.lan
+            version: 6
+            key: {{HOMEPAGE_VAR_PIHOLE_TOKEN}}
+    - Pi-hole 2:
+        href: https://pihole2.joeyme.eu/admin/
+        icon: pi-hole.png
+        description: pihole2.joeyme.eu
+        widget:
+            type: pihole
+            url: http://pihole2.lan
+            version: 6
+            key: {{HOMEPAGE_VAR_PIHOLE2_TOKEN}}
+    - Gateway Router:
+        href: http://a01.lan
+        icon: huawei.png
+    - UniFi OS Server:
+        href: https://unifi.joeyme.eu
+        icon: unifi.png
+        ping: 192.168.100.28
+        statusStyle: basic
+        description: unifi.joeyme.eu
+    - Nginx Proxy Manager:
+        href: http://npm.joeyme.eu
+        icon: si-nginxproxymanager-#F15833
+        widget:
+            type: npm
+            url: http://192.168.100.21:81
+            username: remote.stats@hotmail.com
+            password: {{HOMEPAGE_VAR_NPM_TOKEN}}
+
+- "⠀⠀":
+    - Synology NAS:
+        href: http://QuickConnect.to/ds1-joeyfarts
+        icon: synology-dsm.png
+        description: ds1.lan (DS423)
+        widget:
+            type: diskstation
+            url: http://192.168.100.61:5000
+            username: remote_stats
+            password: {{HOMEPAGE_VAR_SYNOLOGY_TOKEN}}
+            volume: volume_1
+    - Synology DSM:
+        href: https://ds2.joeyme.eu
+        icon: synology-dsm.png
+        description: ds2.lan (Arc-Xpenology)
+        widget:
+            type: diskstation
+            url: http://192.168.100.26:5000
+            username: remote_stats
+            password: {{HOMEPAGE_VAR_SYNOLOGY_TOKEN}}
+    - Synology Photos:
+        href: http://QuickConnect.to/ds1-joeyfarts/photos
+        icon: synology-photos.png
+    - Notes Station:
+        href: http://QuickConnect.to/ds1-joeyfarts/notes
+        icon: synology-note-station.png
+        description: ds1.lan (DS423)
+    - Download Station:
+        href: http://QuickConnect.to/ds1-joeyfarts/download
+        icon: synology-download-station.png
+        widget:
+            type: downloadstation
+            url: http://192.168.100.61:5000/download/
+            username: remote_stats
+            password: {{HOMEPAGE_VAR_SYNOLOGY_TOKEN}}
+
+- "⠀⠀⠀":
+    - Plex:
+        href: https://plex.joeyme.eu/
+        icon: plex.png
+        widget:
+            type: plex
+            url: http://192.168.100.20:32400
+            key: {{HOMEPAGE_VAR_PLEX_TOKEN}}
+    - PiGallery2:
+        href: http://pigallery2.joeyme.eu
+        icon: pigallery2.png
+    - Pulse:
+        href: http://pulse.joeyme.eu
+        icon: pulse.png
+        ping: 192.168.100.11
+        statusStyle: basic
+        description: pulse.joeyme.eu
+    - Dozzle:
+        href: https://dozzle.joeyme.eu
+        icon: dozzle.png
+    - Proxmenux:
+        href: https://proxmenux.joeyme.eu/
+        icon: proxmenu.png
+        description: proxmenux.joeyme.eu
+    - Uptime Kuma:
+        href: http://uptimekuma.joeyme.eu
+        icon: uptime-kuma.png
+        widget:
+            type: uptimekuma
+            url: http://192.168.100.61:3001
+            slug: monitoring
+    
+- Backup:
+    - Proxmox Backup Server:
+        href: https://pbs.joeyme.eu
+        icon: proxmox.png
+        description: pbs.joeyme.eu
+        widget:
+            type: proxmoxbackupserver
+            url: https://192.168.100.4:8007
+            username: homepage@pbs!homepage
+            password: {{HOMEPAGE_VAR_PBS_TOKEN}}

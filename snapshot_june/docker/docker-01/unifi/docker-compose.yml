@@ -1,0 +1,37 @@
+services:
+  unifi-db:
+    image: mongo:7.0
+    container_name: unifi-db
+    restart: unless-stopped
+    volumes:
+      - /opt/unifi/db:/data/db
+      - /opt/unifi/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - unifi-internal
+
+  unifi:
+    image: lscr.io/linuxserver/unifi-network-application:latest
+    container_name: unifi
+    depends_on:
+      - unifi-db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Bratislava
+      - MONGO_USER=unifi
+      - MONGO_PASS=${MONGO_PASS}
+      - MONGO_HOST=unifi-db
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=unifi
+    volumes:
+      - /opt/unifi/config:/config
+    networks:
+      macvlan-net:
+        ipv4_address: 192.168.100.28
+      unifi-internal:
+    restart: unless-stopped
+
+networks:
+  macvlan-net:
+    external: true
+  unifi-internal:
